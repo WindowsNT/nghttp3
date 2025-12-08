@@ -1826,6 +1826,13 @@ typedef struct nghttp3_settings {
    * v1.13.0.
    */
   nghttp3_qpack_indexing_strat qpack_indexing_strat;
+
+   // Setting 0x2b603742ULL
+  uint64_t enable_web_transport;
+
+  // Setting 0xffd277ULL
+  uint64_t enable_webtransport_datagrams;
+
 } nghttp3_settings;
 
 #define NGHTTP3_PROTO_SETTINGS_V1 1
@@ -1864,6 +1871,14 @@ typedef struct nghttp3_proto_settings {
    * Datagrams (see :rfc:`9297`).
    */
   uint8_t h3_datagram;
+
+   // Setting 0x2b603742ULL
+  uint64_t enable_web_transport;
+
+  // Setting 0xffd277ULL
+  uint64_t enable_webtransport_datagrams;
+
+
 } nghttp3_proto_settings;
 
 /**
